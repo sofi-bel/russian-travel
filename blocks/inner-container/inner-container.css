@@ -1,0 +1,16 @@
+.inner-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .inner-container {
+    max-width: 928px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .inner-container {
+    max-width: 984px;
+  }
+}
