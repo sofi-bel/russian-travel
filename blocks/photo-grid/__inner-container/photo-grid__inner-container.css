@@ -1,5 +1,6 @@
 .photo-grid__inner-container {
   margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 @media screen and (min-width: 768px) {

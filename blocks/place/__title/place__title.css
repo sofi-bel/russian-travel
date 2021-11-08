@@ -1,0 +1,16 @@
+.place__title {
+  margin: 0 16px 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .place__title {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .place__title {
+    font-size: 72px;
+    line-height: 76px;
+  }
+}
