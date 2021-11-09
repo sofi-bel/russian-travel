@@ -3,6 +3,8 @@
   margin: 0 auto;
   font-family: 'Inter', 'Arial', sans-serif;
   color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media screen and (min-width: 1280px) {
