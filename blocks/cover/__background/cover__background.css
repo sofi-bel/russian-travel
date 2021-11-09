@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 768px) {
   .cover__background {
-    /*gap: 32px;*/
+    gap: 32px;
     margin: 90px 0 88px;
     padding: 115px 0;
   }
