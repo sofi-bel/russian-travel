@@ -1,23 +1,27 @@
 .place__description {
   margin: 32px 16px 0;
   display: grid;
-  gap: 25px;
+  grid-template-rows: minmax(min-content, max-content);
+  row-gap: 25px;
 }
 
 @media screen and (min-width: 768px) {
   .place__description {
     margin: 0;
+    grid-template-columns: minmax(352px, 1fr);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .place__description {
     gap: 27px;
+    grid-template-columns: minmax(456px, 1fr);
   }
 }
 
 @media screen and (min-width: 1280px) {
   .place__description {
     gap: 26px;
+    grid-template-columns: minmax(484px, 1fr);
   }
 }
