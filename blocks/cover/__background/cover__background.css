@@ -32,7 +32,7 @@
 
 @media screen and (min-width: 1280px) {
   .cover__background {
-    margin: 92px 48px;
+    margin: 92px 0;
     padding: 245px 0;
   }
 }
