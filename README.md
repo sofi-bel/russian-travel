@@ -13,7 +13,7 @@
 * HTML5 & CSS3
 * Flexbox
 * CSS grid
-* BEM,
+* BEM
 * Adaptive web design
 * Responsive web design
 * Mobile first
