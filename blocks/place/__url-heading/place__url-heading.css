@@ -4,6 +4,7 @@
   line-height: 12px;
   color: #aaaaaa;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 @media screen and (min-width: 768px) {
