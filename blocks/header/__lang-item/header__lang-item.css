@@ -1,1 +1,9 @@
-.header__lang-item {}
+.header__lang-item {
+  margin-left: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__lang-item {
+    margin-left: 18px;
+  }
+}
