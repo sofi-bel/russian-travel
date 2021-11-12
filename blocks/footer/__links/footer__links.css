@@ -17,7 +17,7 @@
 
 @media screen and (min-width: 1024px) {
   .footer__links {
-    margin: 0 48px 48px;
+    margin: 0 48px 24px;
   }
 }
 
