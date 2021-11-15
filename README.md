@@ -4,8 +4,6 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/a-meti/russian-travel)
 [![GitHub license](https://img.shields.io/github/license/a-meti/russian-travel)](https://github.com/a-meti/russian-travel/blob/main/LICENSE)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=a-meti)](https://github.com/a-meti/russian-travel)
-
 
 Учебный проект для отработки адаптивной верстки в рамках обучения в [Яндекс.Практикуме Веб-разработчик плюс.](https://practicum.yandex.ru/web-plus/)
 Одностраничный сайт о Путешествии по России. Адаптированный под разные расширения экранов от 320px.
