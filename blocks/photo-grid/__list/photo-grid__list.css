@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0 16px;
   display: grid;
+  /*TODO: поченить картинки */
   grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
   grid-auto-rows: 216px;
   grid-gap: 12px;
