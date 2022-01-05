@@ -1,25 +1,11 @@
 .footer__copyright {
-  margin: 0 16px 24px;
   font-size: 14px;
-  line-height: 14px;
-  font-weight: normal;
+  line-height: 16px;
+  margin: 0;
 }
-
-@media screen and (min-width: 768px) {
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 640px) {
   .footer__copyright {
-    margin: 0 24px 24px;
-    line-height: 16px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .footer__copyright {
-    margin: 0 48px 24px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .footer__copyright {
-    margin: 0 0 24px;
+    margin: 48px 0 0;
   }
 }

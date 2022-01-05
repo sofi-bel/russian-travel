@@ -1,0 +1,11 @@
+.navigation__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 568px){
+  .navigation__list {
+    flex-direction: column;
+  }
+}
