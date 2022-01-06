@@ -1,24 +1,5 @@
 .header__lang-list {
   display: flex;
-  list-style: none;
-  margin: 30px 16px 0;
-  padding-left: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .header__lang-list {
-    margin: 46px 24px 0;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header__lang-list {
-    margin-right: 48px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .header__lang-list {
-    margin-right: 0;
-  }
+  list-style-type: none;
+  padding: 0;
 }

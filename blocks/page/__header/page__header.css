@@ -1,0 +1,23 @@
+.page__header {
+  width: 100%;
+  margin: 0 auto;
+}
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 1140px){
+  .page__header {
+    padding: 0 48px;
+  }
+}
+
+@media screen and (max-width: 984px){
+  .page__header {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .page__header {
+    padding: 0 16px;
+  }
+}
+

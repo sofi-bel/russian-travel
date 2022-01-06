@@ -1,14 +1,24 @@
 .header__lang-link {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 28px;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  /* Можно лучше: transition на ссылки */
+  margin: 0 9px;
   color: #ffffff;
-  text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
+.header__lang-link:hover {
+  opacity: 0.8;
+}
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 640px){
   .header__lang-link {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 18px;
   }
 }
