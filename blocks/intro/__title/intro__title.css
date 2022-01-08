@@ -1,16 +1,11 @@
 .intro__title {
-  margin: 64px 16px 40px;
+  margin: 0 0 40px;
+  /*Если отходить от макета к ПП, то нижний отступ тут меньше*/
 }
-
-@media screen and (min-width: 768px) {
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 640px){
   .intro__title {
-    margin: 88px 24px 40px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .intro__title {
-    margin: 92px 0 40px;
-    max-width: 690px;
+    font-size: 32px;
+    line-height: 35px;
   }
 }
