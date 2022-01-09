@@ -1,22 +1,27 @@
 .lead__subtitle {
-  margin-bottom: 40px;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 20px;
+  font-size: 30px;
+  line-height: 36px;
   text-align: center;
+  margin: 32px 0 64px;
+  /*Можно лучше: чтобы было как макете ограничить max-width: 50% + margin 32px auto 64px*/
 }
-
-@media screen and (min-width: 768px) {
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 1140px){
   .lead__subtitle {
-    max-width: 640px;
-    margin: 0 auto 56px;
-    font-size: 30px;
-    line-height: 36px;
+    margin: 32px 0 56px;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 984px){
   .lead__subtitle {
-    margin-bottom: 64px;
+    margin: 32px 24px 56px;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .lead__subtitle {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 16px 16px 40px;
   }
 }
