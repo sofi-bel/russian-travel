@@ -1,33 +1,30 @@
 .photo-grid__list {
-  list-style: none;
-  margin: 0;
-  padding: 0 16px;
   display: grid;
-  /*TODO: поченить картинки */
-  grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
-  grid-auto-rows: 216px;
-  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 16px;
+  /*
+    Это "Можно лучше" реализация. В качестве "Надо исправить" мы ее не используем.
+  */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-@media screen and (min-width: 768px) {
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 1140px){
   .photo-grid__list {
-    padding: 0 24px;
-    grid-auto-rows: 264px;
-    grid-gap: 16px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .photo-grid__list {
-    padding: 0;
-    grid-auto-rows: 225px;
     grid-gap: 14px;
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 984px){
   .photo-grid__list {
-    grid-auto-rows: 213px;
     grid-gap: 16px;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .photo-grid__list {
+    grid-gap: 12px;
   }
 }
