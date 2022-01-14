@@ -1,0 +1,25 @@
+.places__item {
+  margin: 0 0 80px;
+}
+
+.places__item:last-child {
+  margin-bottom: 0;
+}
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 1140px){
+  .places__item {
+    margin: 0 0 84px;
+  }
+}
+
+@media screen and (max-width: 984px){
+  .places__item {
+    margin: 0 0 72px;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .places__item {
+    margin: 0 0 48px;
+  }
+}

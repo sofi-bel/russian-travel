@@ -1,0 +1,6 @@
+/*TODO: Do mobile-first*/
+@media screen and (max-width: 568px){
+  .places {
+    max-width: 100%;
+  }
+}
