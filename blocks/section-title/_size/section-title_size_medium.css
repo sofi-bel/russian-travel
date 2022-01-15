@@ -3,7 +3,7 @@
   font-size: 72px;
   line-height: 76px;
 }
-
+/*TODO: Do mobile-first*/
 @media screen and (max-width: 984px){
   .section-title_size_medium {
     font-size: 42px;
