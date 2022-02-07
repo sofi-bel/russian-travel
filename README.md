@@ -28,4 +28,4 @@
 
 ## Demo
 
-[Look at the result.](https://a-meti.github.io/russian-travel/index.html)
+[Look at the result.](https://a-meti.github.io/russian-travel/)
