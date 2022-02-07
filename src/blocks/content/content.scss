@@ -1,0 +1,19 @@
+.content {
+  display: grid;
+  flex-shrink: 0;
+  grid-row-gap: 92px;
+
+  // TODO: Do mobile-first
+  @media screen and (max-width: 984px) {
+    grid-row-gap: 88px;
+  }
+
+  @media screen and (max-width: 568px) {
+    grid-row-gap: 64px;
+  }
+
+  &__section {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

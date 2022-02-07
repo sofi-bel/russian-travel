@@ -1,6 +1,0 @@
-/*TODO: Do mobile-first*/
-@media screen and (max-width: 568px){
-  .intro {
-    padding: 0 16px;
-  }
-}

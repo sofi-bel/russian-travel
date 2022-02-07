@@ -1,0 +1,47 @@
+.intro {
+  // TODO: Do mobile-first
+  @media screen and (max-width: 568px) {
+    padding: 0 16px;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+
+    // TODO: Если отходить от макета к ПП, то нижний отступ тут меньше
+
+    // TODO: Do mobile-first
+    @media screen and (max-width: 640px) {
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+
+  &__text {
+    max-width: 690px;
+    margin: 40px 0 32px;
+    font-size: 16px;
+    line-height: 26px;
+
+    // TODO: Если отходить от макета к ПП, то верхний отступ тут меньше
+
+    // TODO: Do mobile-first
+    @media screen and (max-width: 984px) {
+      max-width: none;
+    }
+  }
+
+  &__list {
+    margin: 32px 0 0;
+    padding: 0;
+
+    // TODO: Можно определить шрифты тут. Студенты так и будут делать, скорее
+    //  всего, либо на <li> Не нравится, что в макете это одна группа.
+    list-style-type: none;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__span-accent {
+    font-weight: 700;
+  }
+}

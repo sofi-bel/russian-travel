@@ -1,6 +1,0 @@
-/*TODO: Do mobile-first*/
-@media screen and (max-width: 984px){
-  .lead {
-    max-width: 100%;
-  }
-}

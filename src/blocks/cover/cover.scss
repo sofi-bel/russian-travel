@@ -1,0 +1,99 @@
+.cover {
+  &__item {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 740px;
+    padding: 20px;
+    background-image: url("../images/cover-trains.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-decoration: none;
+
+    // TODO: Добавим паддинг на случай переполнения контентом.
+
+    @media screen and (max-width: 1140px) {
+      min-height: 640px;
+    }
+
+    @media screen and (max-width: 984px) {
+      min-height: 480px;
+    }
+
+    @media screen and (max-width: 568px) {
+      min-height: 200px;
+      padding: 16px;
+    }
+
+    &::before {
+      // TODO: Можно лучше: использовать псевдоэлемент. Оригинал - див внутри
+      //  cover__item
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      // TODO: Можно лучше: использовать transition
+      z-index: -1;
+      background: #2a2c2f;
+      opacity: 0.3;
+      transition: opacity 0.3s;
+
+      // TODO: z-index на оверлей. Не на заголовок и подзаголовок.
+    }
+
+    &:hover::before {
+      opacity: 0.8;
+    }
+  }
+
+  &__title {
+    margin: 0 0 16px;
+    text-align: center;
+
+    @media screen and (max-width: 1140px) {
+      max-width: 656px;
+    }
+
+    @media screen and (max-width: 984px) {
+      font-size: 72px;
+      line-height: 76px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+
+  &__subtitle {
+    max-width: 36%;
+    margin: 16px 0 0;
+    font-size: 18px;
+    line-height: 22px;
+
+    // TODO: Тут студент можно использовать то, что ему захочется. Фрейм в
+    //  макете на всю ширину блока
+    text-align: center;
+
+    @media screen and (max-width: 984px) {
+      max-width: 50%;
+    }
+
+    @media screen and (max-width: 568px) {
+      max-width: none;
+      margin: 8px 0 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

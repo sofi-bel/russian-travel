@@ -1,0 +1,113 @@
+.place {
+  display: grid;
+  grid-template-areas: "title url" "image text";
+  grid-template-columns: 460px 1fr;
+  grid-gap: 48px 40px;
+
+  // TODO: Гриды - можно лучше. Здесь гриды не построены через fit-content и
+  //  auto-fit. Нам нужно совпадение с макетом. Эту задачу, в принципе, можно
+  //  легко решить через флекс.
+
+  // TODO: Do mobile-first
+  @media screen and (max-width: 1140px) {
+    grid-template-columns: 440px 1fr;
+    grid-gap: 48px 32px;
+  }
+
+  @media screen and (max-width: 984px) {
+    grid-template-columns: 340px 1fr;
+    grid-gap: 48px 28px;
+  }
+
+  @media screen and (max-width: 640px) {
+    grid-template-areas: "title title" "image text";
+    grid-template-columns: minmax(200px, 1fr) 1fr;
+  }
+
+  @media screen and (max-width: 568px) {
+    // TODO: Делаем еще один брейкпоинт для изменения отображения.
+    grid-template-areas:
+      "title"
+      "image"
+      "text";
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
+  &__title {
+    grid-area: title;
+    align-self: end;
+    margin: 0;
+
+    // TODO: Do mobile-first
+    @media screen and (max-width: 568px) {
+      margin: 0 16px;
+    }
+  }
+
+  &__website {
+    grid-area: url;
+    align-self: end;
+
+    // TODO: Do mobile-first
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+
+  &__url-heading {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    display: block;
+    margin: 12px 0 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    transition: opacity 0.3s;
+    text-decoration-line: underline;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__image {
+    display: block;
+    grid-area: image;
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__description {
+    grid-area: text;
+
+    // TODO: Do mobile-first
+    @media screen and (max-width: 568px) {
+      margin: 0 16px;
+    }
+  }
+
+  &__paragraph {
+    margin: 24px 0 0;
+    font-size: 18px;
+    line-height: 30px;
+
+    // TODO: Do mobile-first
+    @media screen and (max-width: 984px) {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

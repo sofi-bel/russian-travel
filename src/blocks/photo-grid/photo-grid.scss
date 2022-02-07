@@ -1,0 +1,39 @@
+.photo-grid {
+  // TODO: Do mobile-first
+  @media screen and (max-width: 1200px) {
+    padding: 0 16px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    // TODO: Это "Можно лучше" реализация. В качестве "Надо исправить" мы ее не
+    //  используем.
+
+    // TODO: Do mobile-first
+    @media screen and (max-width: 1140px) {
+      grid-gap: 14px;
+    }
+
+    @media screen and (max-width: 984px) {
+      grid-gap: 16px;
+    }
+
+    @media screen and (max-width: 640px) {
+      grid-gap: 12px;
+    }
+  }
+
+  &__item {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+}

@@ -1,9 +1,0 @@
-.place__description {
-  grid-area: text;
-}
-/*TODO: Do mobile-first*/
-@media screen and (max-width: 568px){
-  .place__description {
-    margin: 0 16px;
-  }
-}
