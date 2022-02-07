@@ -16,15 +16,43 @@
 
 ## Stack
 * HTML5 & CSS3
+* Pug
+* SCSS
 * Flexbox
 * CSS grid
 * BEM
-* BEM Nested
 * Adaptive web design
 * Responsive web design
 * Mobile first
 * Media queries
 * Font smoothing
+* Web accessibility
+* Relative units
+* Semantic layout
+* Webpack
+
+## Build Setup
+Clone the repo
+
+```
+https://github.com/a-meti/russian-travel.git
+```
+Install dependencies
+```
+npm install
+```
+Server with hot reload at http://localhost:9000/
+```
+npm run start
+```
+Production Build
+```
+npm run build
+```
+Development mode
+```
+npm run dev
+```
 
 ## Demo
 
