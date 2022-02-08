@@ -90,7 +90,9 @@ html(lang="en")
             li.intro__item
               span.intro__span-accent Airports
               | 241
-        section.photo-grid.section.section__photo-grid
+        section.photo-grid.section.section__photo-grid(
+          aria-label="Block with photos"
+        )
           ul.photo-grid__list.list
             li.photo-grid__list-item
               picture.photo-grid__image-wrap
@@ -212,7 +214,9 @@ html(lang="en")
                   src= require("./images/photo-grid-ergaki.jpg"),
                   alt="Ergaki"
                 )
-        section.places.section.section_size_narrow
+        section.places.section.section_size_narrow(
+          aria-label="Block with articles about places"
+        )
           article.place.places__item
             h2.place__title.title
               | Curonian Spit
@@ -232,7 +236,7 @@ html(lang="en")
               )
               img.place__image.image(
                 src= require("./images/place-kosa.jpg"),
-                alt="Image of the Curonian Spit"
+                alt="Curonian Spit"
               )
             .place__description
               p.place__paragraph.text
@@ -268,7 +272,7 @@ html(lang="en")
               )
               img.place__image.image(
                 src= require("./images/place-kolsky.jpg"),
-                alt="Image of the Kola Peninsula"
+                alt="Kola Peninsula"
               )
             .place__description
               p.place__paragraph.text
