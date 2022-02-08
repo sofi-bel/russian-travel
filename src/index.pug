@@ -32,8 +32,8 @@ html(lang="en")
     )
     title= htmlWebpackPlugin.options.title
   body.page
-    .page__container
-      header.header.section.page__header
+    .container.page__container
+      header.header.page__header
         a.logo.header__logo.link(
           href="https://practicum.yandex.com/",
           target="_blank",
@@ -41,25 +41,25 @@ html(lang="en")
           aria-label="Logo",
         )
       main.content.page__content
-        section.lead.section.section_size_narrow.content__section
+        section.lead.section.section__lead.section_size_narrow
           h1.lead__title.title
             | Traveling in Russia
           p.lead__subtitle.text
             | The real country is not in the news, but here.
-          figure
-            picture.lead__image-wrap
+          figure.lead__image-wrap
+            picture
               source(
                 srcset=require("./images/lead-polka.webp"),
                 type="image/webp"
               )
-              img.lead__image(
+              img.lead__image.image(
                 src= require("./images/lead-polka.jpg"),
                 alt="Travel map in Russia"
               )
             figcaption.lead__caption
               | your shelf is top
-        section.intro.section.section_size_narrow.content__section
-          h2.intro__title.section-title.section-title_size_small.title
+        section.intro.section.section__intro.section_size_narrow
+          h2.intro__title.title
             | What didn’t we see there?
           p.intro__text.text
             | According to VTsIOM polls, 95% of Russians dream of going
@@ -90,7 +90,7 @@ html(lang="en")
             li.intro__item
               span.intro__span-accent Airports
               | 241
-        section.photo-grid.section.content__section
+        section.photo-grid.section.section__photo-grid
           ul.photo-grid__list.list
             li.photo-grid__list-item
               picture.photo-grid__image-wrap
@@ -98,7 +98,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-train.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-train.jpg"),
                   alt="a train"
                 )
@@ -108,7 +108,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-atharva-tulsi.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-atharva-tulsi.jpg"),
                   alt="Atharva-Tulsi"
                 )
@@ -118,7 +118,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-tuman.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-tuman.jpg"),
                   alt="fog"
                 )
@@ -128,7 +128,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-sochi.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-sochi.jpg"),
                   alt="Sochi"
                 )
@@ -138,7 +138,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-arisa.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-arisa.jpg"),
                   alt="Arisa"
                 )
@@ -148,7 +148,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-baikal.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-baikal.jpg"),
                   alt="Baikal"
                 )
@@ -158,7 +158,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-elbrus.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-elbrus.jpg"),
                   alt="Elbrus"
                 )
@@ -168,7 +168,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-kondratiev.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-kondratiev.jpg"),
                   alt="Kondratiev"
                 )
@@ -178,7 +178,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-kamchatka-1.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-kamchatka-1.jpg"),
                   alt="Kamchatka-1"
                 )
@@ -188,7 +188,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-kamchatka-2.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-kamchatka-2.jpg"),
                   alt="Kamchatka-2"
                 )
@@ -198,7 +198,7 @@ html(lang="en")
                   srcset=require("./images/photo-grid-baikal-2.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-baikal-2.jpg"),
                   alt="Baikal-2"
                 )
@@ -208,13 +208,13 @@ html(lang="en")
                   srcset=require("./images/photo-grid-ergaki.webp"),
                   type="image/webp"
                 )
-                img.photo-grid__item(
+                img.photo-grid__item.image(
                   src= require("./images/photo-grid-ergaki.jpg"),
                   alt="Ergaki"
                 )
-        section.places.section.section_size_narrow.content__section
+        section.places.section.section_size_narrow
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.title
+            h2.place__title.title
               | Curonian Spit
             .place__website
               span.place__url-heading
@@ -230,7 +230,7 @@ html(lang="en")
                 srcset=require("./images/place-kosa.webp"),
                 type="image/webp"
               )
-              img.place__image(
+              img.place__image.image(
                 src= require("./images/place-kosa.jpg"),
                 alt="Image of the Curonian Spit"
               )
@@ -250,7 +250,7 @@ html(lang="en")
                 | fuss, dipping into the tranquility of nature and the smell
                 | of steel, cool sea.
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.title
+            h2.place__title.title
               | Kola peninsula
             .place__website
               span.place__url-heading
@@ -266,7 +266,7 @@ html(lang="en")
                 srcset=require("./images/place-kolsky.webp"),
                 type="image/webp"
               )
-              img.place__image(
+              img.place__image.image(
                 src= require("./images/place-kolsky.jpg"),
                 alt="Image of the Kola Peninsula"
               )
@@ -286,7 +286,7 @@ html(lang="en")
                 | of seeing the Northern Lights starts to come true with
                 | a ticket to Murmansk.
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.title
+            h2.place__title.title
               | Altai
             .place__website
               span.place__url-heading
@@ -302,7 +302,7 @@ html(lang="en")
                 srcset=require("./images/place-altai.webp"),
                 type="image/webp"
               )
-              img.place__image(
+              img.place__image.image(
                 src= require("./images/place-altai.jpg"),
                 alt="Forests of Altai"
               )
@@ -322,7 +322,7 @@ html(lang="en")
                 | ridges, and roe deer graze on the plains. And the famous
                 | manuls are also inhabitants of the Altai Territory.
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.title
+            h2.place__title.title
               | Winter Baikal
             .place__website
               span.place__url-heading
@@ -338,7 +338,7 @@ html(lang="en")
                 srcset=require("./images/place-winter-baikal.webp"),
                 type="image/webp"
               )
-              img.place__image(
+              img.place__image.image(
                 src= require("./images/place-winter-baikal.jpg"),
                 alt="Ice on Baikal"
               )
@@ -356,7 +356,7 @@ html(lang="en")
                 | a world record was set at the Baikal Mile festival —
                 | 197.011 km/h.
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.title
+            h2.place__title.title
               | Karelia
             .place__website
               span.place__url-heading
@@ -372,7 +372,7 @@ html(lang="en")
                 srcset=require("./images/place-karelia.webp"),
                 type="image/webp"
               )
-              img.place__image(
+              img.place__image.image(
                 src= require("./images/place-karelia.jpg"),
                 alt="Forests of Karelia"
               )
@@ -390,13 +390,13 @@ html(lang="en")
                 | on rare paths trees a couple of meters from the
                 | ground are marked with bear claws. Let everyone know who’s
                 | boss.
-        section.cover.section.content__section
-          a.cover__item(
+        section.cover.section.section__cover
+          a.cover__item.link(
             href="https://stampsy.com/na-elektrichkakh-do-baikala",
             target="_blank",
             rel="noopener noreferrer"
           )
-            h2.cover__title.section-title.section-title_size_medium.title
+            h2.cover__title.title
               | To Baikal «on dogs»
             p.cover__subtitle.text
               | Based on the educational topic about the Trans-Siberian

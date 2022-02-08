@@ -1,30 +1,16 @@
+@use "sass:map";
+@import "./src/scss/variables";
+
 .footer {
   display: flex;
-  flex-shrink: 0;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  margin: auto auto 0;
-
-  // TODO: Do mobile-first
-  @media screen and (max-width: 568px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
   &__copyright {
-    margin: 0;
-    font-size: 14px;
-    line-height: 16px;
-
-    // TODO: Do mobile-first
-    @media screen and (max-width: 640px) {
-      margin: 48px 0 0;
-    }
+    font-size: map.get($font-size, xs);
   }
 
   &__author-link {
-    color: #fff;
+    margin-left: map.get($spaces, xxs);
     text-decoration: none;
 
     &:hover {

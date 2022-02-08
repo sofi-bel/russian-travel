@@ -1,88 +1,41 @@
+@use "sass:map";
+@import "./src/scss/variables";
+
+$text-width-lg: 45rem;
+
 .lead {
-  // TODO: Do mobile-first
-  @media screen and (max-width: 984px) {
-    max-width: 100%;
-  }
+  align-items: center;
+  text-align: center;
 
   &__title {
-    margin: 0 0 32px;
-    font-size: 96px;
-    line-height: 100px;
-    text-align: center;
+    font-size: map.get($font-size, xl);
 
-    // TODO: Do mobile-first
-    @media screen and (max-width: 984px) {
-      margin: 0 auto 32px;
-    }
-
-    @media screen and (max-width: 720px) {
-      font-size: 60px;
-      line-height: 64px;
-    }
-
-    @media screen and (max-width: 640px) {
-      margin: 0 auto 16px;
-      font-size: 40px;
-      line-height: 44px;
+    @media (min-width: map.get($grid-breakpoints, lg)) {
+      max-width: $text-width-lg;
+      font-size: map.get($font-size, xxl);
     }
   }
 
   &__subtitle {
-    margin: 32px 0 64px;
-    font-size: 30px;
-    line-height: 36px;
-    text-align: center;
-
-    // TODO: Можно лучше: чтобы было как макете ограничить max-width: 50% +
-    //  margin 32px auto 64px
-
-    // TODO: Do mobile-first
-    @media screen and (max-width: 1140px) {
-      margin: 32px 0 56px;
-    }
-
-    @media screen and (max-width: 984px) {
-      margin: 32px 24px 56px;
-    }
-
-    @media screen and (max-width: 640px) {
-      margin: 16px 16px 40px;
-      font-size: 16px;
-      line-height: 20px;
+    @media (min-width: map.get($grid-breakpoints, lg)) {
+      font-size: map.get($font-size, md);
     }
   }
 
-  &__image {
+  &__image-wrap {
     display: block;
-    object-fit: cover;
-    width: 100%;
-    max-width: 100%;
-    margin: 64px 0 8px;
-
-    // TODO: Do mobile-first
-    @media screen and (max-width: 1140px) {
-      margin: 56px 0 8px;
-    }
-
-    @media screen and (max-width: 640px) {
-      margin: 40px 0 8px;
-    }
+    margin: 0;
   }
 
   &__caption {
-    margin: 8px 0 0;
-    font-size: 10px;
-    line-height: 14px;
+    padding-left: map.get($spaces, xs);
+    font-size: map.get($font-size, xxs);
     letter-spacing: 0.15em;
+    text-align: left;
     text-transform: uppercase;
 
-    // TODO: Do mobile-first
-    @media screen and (max-width: 984px) {
-      margin: 8px 24px 0;
-    }
-
-    @media screen and (max-width: 640px) {
-      margin: 8px 16px 0;
+    @media (min-width: map.get($grid-breakpoints, lg)) {
+      padding-left: 0;
     }
   }
 }

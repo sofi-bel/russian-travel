@@ -1,47 +1,23 @@
+@use "sass:map";
+@import "./src/scss/variables";
+
 .intro {
-  // TODO: Do mobile-first
-  @media screen and (max-width: 568px) {
-    padding: 0 16px;
-  }
-
   &__title {
-    margin: 0 0 40px;
+    font-size: map.get($font-size, lg);
+    line-height: map.get($line-height, sm);
+    text-transform: uppercase;
 
-    // TODO: Если отходить от макета к ПП, то нижний отступ тут меньше
-
-    // TODO: Do mobile-first
-    @media screen and (max-width: 640px) {
-      font-size: 32px;
-      line-height: 35px;
+    @media (min-width: map.get($grid-breakpoints, lg)) {
+      letter-spacing: 0.1em;
     }
   }
 
   &__text {
-    max-width: 690px;
-    margin: 40px 0 32px;
-    font-size: 16px;
-    line-height: 26px;
-
-    // TODO: Если отходить от макета к ПП, то верхний отступ тут меньше
-
-    // TODO: Do mobile-first
-    @media screen and (max-width: 984px) {
-      max-width: none;
-    }
-  }
-
-  &__list {
-    margin: 32px 0 0;
-    padding: 0;
-
-    // TODO: Можно определить шрифты тут. Студенты так и будут делать, скорее
-    //  всего, либо на <li> Не нравится, что в макете это одна группа.
-    list-style-type: none;
-    font-size: 12px;
-    line-height: 18px;
+    max-width: map.get($container-widths, sm);
   }
 
   &__span-accent {
-    font-weight: 700;
+    margin-right: map.get($spaces, xxs);
+    font-weight: map.get($font-weight, "bold");
   }
 }

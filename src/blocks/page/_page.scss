@@ -1,76 +1,50 @@
+@use "sass:map";
+@import "./src/scss/variables";
+
 .page {
-  margin: 0;
-  background-color: #2a2c2f;
-  color: #fff;
-  font-family: Inter, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: map.get($theme-colors, "bg-color");
+  color: map.get($theme-colors, "text-primary-color");
+  font-weight: map.get($font-weight, "normal");
+  font-family: $font-stack;
+  line-height: map.get($line-height, lg);
 
   &__container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-width: 320px;
-    max-width: 1184px;
+    min-width: map.get($container-widths, xs);
+    max-width: map.get($container-widths, xl);
     min-height: 100vh;
     margin: 0 auto;
-    padding-top: 20px;
-
-    @media screen and (min-width: 425px) {
-      padding: 34px 0 24px;
-    }
   }
 
   &__header {
-    width: 100%;
-    margin: 0 auto;
+    flex: 0 0 auto;
+    margin: map.get($spaces, xs) 0;
+    padding: 0 map.get($spaces, xs);
 
-    // TODO: Do mobile-first
-    @media screen and (max-width: 1140px) {
-      padding: 0 48px;
+    @media (min-width: map.get($grid-breakpoints, md)) {
+      margin: map.get($spaces, sm) 0;
     }
 
-    @media screen and (max-width: 984px) {
-      padding: 0 24px;
-    }
-
-    @media screen and (max-width: 640px) {
-      padding: 0 16px;
+    @media (min-width: map.get($grid-breakpoints, xl)) {
+      padding: 0;
     }
   }
 
   &__content {
-    margin-top: 58px;
-    margin-bottom: 92px;
+    flex: 1 0 auto;
+    margin: map.get($spaces, xs) auto;
 
-    // TODO: Do mobile-first
-    @media screen and (max-width: 1140px) {
-      margin-top: 50px;
-    }
-
-    @media screen and (max-width: 984px) {
-      margin-bottom: 88px;
-    }
-
-    @media screen and (max-width: 568px) {
-      margin-bottom: 64px;
+    @media (min-width: map.get($grid-breakpoints, md)) {
+      margin: map.get($spaces, sm) 0;
     }
   }
 
   &__footer {
-    width: 100%;
+    flex: 0 0 auto;
+    margin-bottom: map.get($spaces, xs);
 
-    // TODO: Do mobile-first
-    @media screen and (max-width: 1140px) {
-      padding: 0 48px;
-    }
-
-    @media screen and (max-width: 984px) {
-      padding: 0 24px;
-    }
-
-    @media screen and (max-width: 640px) {
-      padding: 0 16px;
+    @media (min-width: map.get($grid-breakpoints, md)) {
+      margin-bottom: map.get($spaces, sm);
     }
   }
 }

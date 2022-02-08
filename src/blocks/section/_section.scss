@@ -1,20 +1,59 @@
+@use "sass:map";
+@import "./src/scss/variables";
+
 .section {
+  display: flex;
+  flex-direction: column;
+  gap: map.get($spaces, xs);
   box-sizing: border-box;
 
+  @media (min-width: map.get($grid-breakpoints, md)) {
+    gap: map.get($spaces, sm);
+  }
+
   &_size_narrow {
-    max-width: calc(100% - 100px * 2);
-
-    // TODO: Do mobile-first
-    @media screen and (max-width: 1140px) {
-      max-width: calc(100% - 48px * 2);
+    @media (min-width: map.get($grid-breakpoints, lg)) {
+      min-width: map.get($container-widths, lg);
     }
 
-    @media screen and (max-width: 984px) {
-      max-width: calc(100% - 24px * 2);
+    @media (min-width: map.get($grid-breakpoints, xl)) {
+      max-width: map.get($container-widths, lg);
     }
+  }
 
-    @media screen and (max-width: 568px) {
+  &__lead {
+    @media (min-width: map.get($grid-breakpoints, sm)) {
       max-width: 100%;
+    }
+  }
+
+  &__intro {
+    padding: 0 (map.get($spaces, xs));
+
+    @media (min-width: map.get($grid-breakpoints, md)) {
+      align-self: flex-start;
+    }
+
+    @media (min-width: map.get($grid-breakpoints, lg)) {
+      align-self: center;
+      padding: 0;
+    }
+  }
+
+  &__photo-grid {
+    min-width: 100%;
+    padding: 0 (map.get($spaces, xs));
+
+    @media (min-width: map.get($grid-breakpoints, xl)) {
+      padding: 0;
+    }
+  }
+
+  &__cover {
+    min-width: 100%;
+
+    @media (min-width: map.get($grid-breakpoints, xl)) {
+      padding: 0;
     }
   }
 }

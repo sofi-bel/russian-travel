@@ -25,7 +25,6 @@
 * Responsive web design
 * Mobile first
 * Media queries
-* Font smoothing
 * Web accessibility
 * Relative units
 * Semantic layout

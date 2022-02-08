@@ -1,99 +1,63 @@
+@use "sass:map";
+@import "./src/scss/variables";
+@import "./src/scss/helpers";
+
+$image-height-xs: 12.5rem;
+$image-height-md: 30rem;
+$image-height-lg: 40rem;
+$image-height-xl: 46.25rem;
+
 .cover {
   &__item {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
+    gap: map.get($spaces, xs);
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    min-height: 740px;
-    padding: 20px;
+    min-height: $image-height-xs;
+    padding: map.get($spaces, xs);
     background-image: url("../images/cover-trains.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    text-align: center;
     text-decoration: none;
 
-    // TODO: Добавим паддинг на случай переполнения контентом.
-
-    @media screen and (max-width: 1140px) {
-      min-height: 640px;
+    @media (min-width: map.get($grid-breakpoints, md)) {
+      min-height: $image-height-md;
     }
 
-    @media screen and (max-width: 984px) {
-      min-height: 480px;
+    @media (min-width: map.get($grid-breakpoints, lg)) {
+      min-height: $image-height-lg;
     }
 
-    @media screen and (max-width: 568px) {
-      min-height: 200px;
-      padding: 16px;
+    @media (min-width: map.get($grid-breakpoints, xl)) {
+      min-height: $image-height-xl;
     }
 
     &::before {
-      // TODO: Можно лучше: использовать псевдоэлемент. Оригинал - див внутри
-      //  cover__item
+      @extend %absolute-full-size;
+
       content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
-      // TODO: Можно лучше: использовать transition
       z-index: -1;
-      background: #2a2c2f;
+      background: map.get($theme-colors, "bg-color");
       opacity: 0.3;
-      transition: opacity 0.3s;
-
-      // TODO: z-index на оверлей. Не на заголовок и подзаголовок.
-    }
-
-    &:hover::before {
-      opacity: 0.8;
     }
   }
 
   &__title {
-    margin: 0 0 16px;
-    text-align: center;
+    max-width: map.get($container-widths, xs);
+    font-size: map.get($font-size, lg);
 
-    @media screen and (max-width: 1140px) {
-      max-width: 656px;
-    }
-
-    @media screen and (max-width: 984px) {
-      font-size: 72px;
-      line-height: 76px;
-    }
-
-    @media screen and (max-width: 640px) {
-      margin: 0 0 8px;
-      font-size: 32px;
-      line-height: 35px;
+    @media (min-width: map.get($grid-breakpoints, xl)) {
+      font-size: map.get($font-size, xl);
     }
   }
 
   &__subtitle {
-    max-width: 36%;
-    margin: 16px 0 0;
-    font-size: 18px;
-    line-height: 22px;
-
-    // TODO: Тут студент можно использовать то, что ему захочется. Фрейм в
-    //  макете на всю ширину блока
-    text-align: center;
-
-    @media screen and (max-width: 984px) {
-      max-width: 50%;
-    }
-
-    @media screen and (max-width: 568px) {
-      max-width: none;
-      margin: 8px 0 0;
-      font-size: 14px;
-      line-height: 16px;
-    }
+    max-width: map.get($container-widths, sm);
   }
 }
