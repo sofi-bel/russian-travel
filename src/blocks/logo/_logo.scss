@@ -1,0 +1,8 @@
+$logo-height: 3.25rem;
+$logo-width: 5rem;
+
+.logo {
+  min-width: $logo-width;
+  min-height: $logo-height;
+  background-image: url("../images/header-logo.svg");
+}
