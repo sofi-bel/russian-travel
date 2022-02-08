@@ -1,239 +1,413 @@
 doctype html
-html(lang='en')
+html(lang="en")
   head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width,initial-scale=1')
-    meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    meta(name='description' content='Traveling in Russia')
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="description" content="Traveling in Russia")
     meta(
-      name='keywords',
-      content='Project Traveling in Russia, Project Traveling in Russia Y.Practicum, Y.Practicum, Anastasiia Metikova'
+      name="keywords",
+      content="Project Traveling in Russia, Project Traveling in Russia Y.Practicum, Y.Practicum, Anastasiia Metikova"
     )
-    meta(name='author' content='Anastasiia Metikova')
+    meta(name="author" content="Anastasiia Metikova")
     link(
-      rel='apple-touch-icon',
+      rel="apple-touch-icon",
       href= require("./favicon/apple-touch-icon.png"),
     )
     link(
-      rel='manifest',
+      rel="manifest",
       href= require("./favicon/site.webmanifest"),
     )
     link(
-      rel='icon',
-      href= require("./favicon/favicon.svg"), type='image/svg+xml'
+      rel="icon",
+      href= require("./favicon/favicon.svg"), type="image/svg+xml"
     )
     link(
-      rel='icon',
-      href= require("./favicon/favicon.ico"), sizes='any'
+      rel="icon",
+      href= require("./favicon/favicon.ico"), sizes="any"
     )
     meta(
-      name='google-site-verification',
-      content='Ea9NWQU5CDgPbBBq3ivltxc9kZ43a4avIPfmgYW5bZM'
+      name="google-site-verification",
+      content="Ea9NWQU5CDgPbBBq3ivltxc9kZ43a4avIPfmgYW5bZM"
     )
     title= htmlWebpackPlugin.options.title
   body.page
     .page__container
       header.header.section.page__header
-        a.logo.header__logo(href= './' target='_blank' rel='noopener noreferrer')
-          img(src= require("./images/header-logo.svg") alt='Logo with the image of Russia')
+        a.logo.header__logo.link(
+          href="https://practicum.yandex.com/",
+          target="_blank",
+          rel="noopener noreferrer",
+          aria-label="Logo",
+        )
       main.content.page__content
         section.lead.section.section_size_narrow.content__section
-          h1.lead__title.
-
-                        Traveling in Russia
-
-          p.lead__subtitle.
-
-                        The real country is not in the news, but here.
-
+          h1.lead__title.title
+            | Traveling in Russia
+          p.lead__subtitle.text
+            | The real country is not in the news, but here.
           figure
-            img.lead__image(src= require("./images/lead-polka.jpg"), alt='Карта путешествия по России')
-            figcaption.lead__caption.
-
-                            your shelf is top
-
+            picture.lead__image-wrap
+              source(
+                srcset=require("./images/lead-polka.webp"),
+                type="image/webp"
+              )
+              img.lead__image(
+                src= require("./images/lead-polka.jpg"),
+                alt="Travel map in Russia"
+              )
+            figcaption.lead__caption
+              | your shelf is top
         section.intro.section.section_size_narrow.content__section
-          h2.intro__title.section-title.section-title_size_small.
-
-                        What didn’t we see there?
-
-          p.intro__text.
-
-                        According to VTsIOM polls, 95% of Russians dream of going somewhere, but only 36% plan to spend their holidays in their native country. Like, what have we not seen here at home? In fact, Russia is a whole universe with the gentle sea of ​​the south, the dense forests of the Sayans, and the harsh ice of the Putorana Plateau. And you can also see all these beauties without millions in your account, a passport and many hours of flights. Like, for example, Vera Bashmakova, a brave young mother who took three children in her arms, put them in her Lada, and drove 20 thousand kilometers across her native country. We have selected and described some interesting places worthy of your vacation.
-
-          ul.intro__list
-            li
+          h2.intro__title.section-title.section-title_size_small.title
+            | What didn’t we see there?
+          p.intro__text.text
+            | According to VTsIOM polls, 95% of Russians dream of going
+            | somewhere, but only 36% plan to spend their holidays
+            | in their native country. Like, what have we not seen here
+            | at home? In fact, Russia is a whole universe with the
+            | gentle sea of ​​the south, the dense forests of the
+            | Sayans, and the harsh ice of the Putorana Plateau. And you can
+            | also see all these beauties without millions in your account,
+            | a passport and many hours of flights. Like, for example,
+            | Vera Bashmakova, a brave young mother who took three children
+            | in her arms, put them in her Lada, and drove 20 thousand
+            | kilometers across her native country. We have selected and
+            | described some interesting places worthy of your vacation.
+          ul.intro__list.list
+            li.intro__item
               span.intro__span-accent Time zones
               | 11
-            li
+            li.intro__item
               span.intro__span-accent UNESCO natural heritage sites
               | 12
-            li
+            li.intro__item
               span.intro__span-accent UNESCO cultural heritage sites
               | 16
-            li
+            li.intro__item
               span.intro__span-accent Nature reserves
               | 105
-            li
+            li.intro__item
               span.intro__span-accent Airports
               | 241
         section.photo-grid.section.content__section
-          ul.photo-grid__list
+          ul.photo-grid__list.list
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-train.jpg") alt='a train')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-train.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-train.jpg"),
+                  alt="a train"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-atharva-tulsi.jpg") alt='Atharva-Tulsi')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-atharva-tulsi.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-atharva-tulsi.jpg"),
+                  alt="Atharva-Tulsi"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-tuman.jpg") alt='fog')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-tuman.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-tuman.jpg"),
+                  alt="fog"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-sochi.jpg") alt='Sochi')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-sochi.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-sochi.jpg"),
+                  alt="Sochi"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-arisa.jpg") alt='Arisa')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-arisa.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-arisa.jpg"),
+                  alt="Arisa"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-baikal.jpg") alt='Baikal')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-baikal.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-baikal.jpg"),
+                  alt="Baikal"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-elbrus.jpg") alt='Elbrus')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-elbrus.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-elbrus.jpg"),
+                  alt="Elbrus"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-kondratiev.jpg") alt='Kondratiev')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-kondratiev.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-kondratiev.jpg"),
+                  alt="Kondratiev"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-kamchatka-1.jpg") alt='Kamchatka-1')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-kamchatka-1.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-kamchatka-1.jpg"),
+                  alt="Kamchatka-1"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-kamchatka-2.jpg") alt='Kamchatka-2')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-kamchatka-2.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-kamchatka-2.jpg"),
+                  alt="Kamchatka-2"
+                )
             li.photo-grid__list-item
-              img.photo-grid__item(src= require("./images/photo-grid-baikal-2.jpg") alt='Baikal-2')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-baikal-2.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-baikal-2.jpg"),
+                  alt="Baikal-2"
+                )
             li.photo-grid__item
-              img.photo-grid__item(src= require("./images/photo-grid-ergaki.jpg") alt='Ergaki')
+              picture.photo-grid__image-wrap
+                source(
+                  srcset=require("./images/photo-grid-ergaki.webp"),
+                  type="image/webp"
+                )
+                img.photo-grid__item(
+                  src= require("./images/photo-grid-ergaki.jpg"),
+                  alt="Ergaki"
+                )
         section.places.section.section_size_narrow.content__section
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.
-
-                            Curonian Spit
-
+            h2.place__title.section-title.section-title_size_medium.title
+              | Curonian Spit
             .place__website
-              span.place__url-heading.
-
-                                URL
-
-              a.place__link(href= 'https://whc.unesco.org/en/list/994' target='_blank' rel='noopener noreferrer').
-
-                                unesco.org
-
-            img.place__image(src= require("./images/place-kosa.jpg") alt='Image of the Curonian Spit')
+              span.place__url-heading
+                | URL
+              a.place__link.link(
+                href= "https://whc.unesco.org/en/list/994",
+                target="_blank",
+                rel="noopener noreferrer",
+              )
+                | unesco.org
+            picture.place__image-wrap
+              source(
+                srcset=require("./images/place-kosa.webp"),
+                type="image/webp"
+              )
+              img.place__image(
+                src= require("./images/place-kosa.jpg"),
+                alt="Image of the Curonian Spit"
+              )
             .place__description
-              p.place__paragraph.
-
-                                Here, in the middle of forests and sand dunes, you can see two water horizons — the calm Curonian Lagoon on one side and the rippling waves of the Baltic Sea on the other. A unique natural area on the edge of the Russian enclave.
-
-              p.place__paragraph.
-
-                                The Kaliningrad region does not end there. For the traveler and researcher, there is the westernmost point of Russia, the Baltic Spit, and the German heritage of a scattering of small seaside towns in the same neighborhood. The atmosphere of these places eliminates the fuss, dipping into the tranquility of nature and the smell of steel, cool sea.
-
+              p.place__paragraph.text
+                | Here, in the middle of forests and sand dunes, you can
+                | see two water horizons — the calm Curonian Lagoon on one
+                | side and the rippling waves of the Baltic Sea on the
+                | other. A unique natural area on the edge of the
+                | Russian enclave.
+              p.place__paragraph.text
+                | The Kaliningrad region does not end there. For the traveler
+                | and researcher, there is the westernmost point
+                | of Russia, the Baltic Spit, and the German heritage
+                | of a scattering of small seaside towns in the same
+                | neighborhood. The atmosphere of these places eliminates the
+                | fuss, dipping into the tranquility of nature and the smell
+                | of steel, cool sea.
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.
-
-                            Kola peninsula
-
+            h2.place__title.section-title.section-title_size_medium.title
+              | Kola peninsula
             .place__website
-              span.place__url-heading.
-
-                                URL
-
-              a.place__link(href='https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy' target='_blank' rel='noopener noreferrer').
-
-                                National Geographic
-
-            img.place__image(src= require("./images/place-kolsky.jpg") alt='Image of the Kola Peninsula')
+              span.place__url-heading
+                | URL
+              a.place__link.link(
+                href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy",
+                target="_blank",
+                rel="noopener noreferrer"
+              )
+                | National Geographic
+            picture.place__image-wrap
+              source(
+                srcset=require("./images/place-kolsky.webp"),
+                type="image/webp"
+              )
+              img.place__image(
+                src= require("./images/place-kolsky.jpg"),
+                alt="Image of the Kola Peninsula"
+              )
             .place__description
-              p.place__paragraph.
-
-                                Almost the entire peninsula is located beyond the Arctic Circle. Sami tundra, from which to the south - taiga, and to the north — the Arctic Ocean, pretending to be the Barents Sea.
-
-              p.place__paragraph.
-
-                                Perhaps you watched Zvyagintsev and even heard the story of the Arctic festival in Teriberka. Perhaps the word «Khibiny» did not remain under the snow of school memories of geography lessons. Perhaps you were not interested in the ultra-deep well penetrating the earth’s crust, but apathy has long covered you from apatites. But your dream of seeing the Northern Lights starts to come true with a ticket to Murmansk.
-
+              p.place__paragraph.text
+                | Almost the entire peninsula is located beyond the Arctic
+                | Circle. Sami tundra, from which to the south - taiga, and
+                | to the north — the Arctic Ocean, pretending
+                | to be the Barents Sea.
+              p.place__paragraph.text
+                | Perhaps you watched Zvyagintsev and even heard the story
+                | of the Arctic festival in Teriberka. Perhaps the word
+                | «Khibiny» did not remain under the snow of school memories
+                | of geography lessons. Perhaps you were not interested
+                | in the ultra-deep well penetrating the earth’s crust, but
+                | apathy has long covered you from apatites. But your dream
+                | of seeing the Northern Lights starts to come true with
+                | a ticket to Murmansk.
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.
-
-                            Altai
-
+            h2.place__title.section-title.section-title_size_medium.title
+              | Altai
             .place__website
-              span.place__url-heading.
-
-                                URL
-
-              a.place__link(href='https://www.facebook.com/vera.bashmakova/posts/10156011613718822' target='_blank' rel='noopener noreferrer').
-
-                                Facebook
-
-            img.place__image(src= require("./images/place-altai.jpg") alt="Forests of Altai")
+              span.place__url-heading
+                | URL
+              a.place__link.link(
+                href="https://www.facebook.com/vera.bashmakova/posts/10156011613718822",
+                target="_blank",
+                rel="noopener noreferrer"
+              )
+                | Facebook
+            picture.place__image-wrap
+              source(
+                srcset=require("./images/place-altai.webp"),
+                type="image/webp"
+              )
+              img.place__image(
+                src= require("./images/place-altai.jpg"),
+                alt="Forests of Altai"
+              )
             .place__description
-              p.place__paragraph.
-
-                                Altai is one of the most beautiful places in Russia. First of all, because of the mountains: if you drive along the ridge, you will see slopes strewn with pine trees, mountain rivers and lakes. And if you open the windows in the car, you can get acquainted with the invisible miracle of these places — the mountain air.
-
-              p.place__paragraph.
-
-                                The climate in Altai is temperate, so it is best to go here in summer. So you will see all the variety of local flora and fauna. Moose roam the forests of Altai, eagles fly over the ridges, and roe deer graze on the plains. And the famous manuls are also inhabitants of the Altai Territory.
-
+              p.place__paragraph.text
+                | Altai is one of the most beautiful places in Russia.
+                | First of all, because of the mountains: if you drive
+                | along the ridge, you will see slopes strewn with pine trees,
+                | mountain rivers and lakes. And if you open the windows
+                | in the car, you can get acquainted with the invisible
+                | miracle of these places — the mountain air.
+              p.place__paragraph.text
+                | The climate in Altai is temperate,
+                | so it is best to go here in summer.
+                | So you will see all the variety of local flora and
+                | fauna. Moose roam the forests of Altai, eagles fly over the
+                | ridges, and roe deer graze on the plains. And the famous
+                | manuls are also inhabitants of the Altai Territory.
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.
-
-                            Winter Baikal
-
+            h2.place__title.section-title.section-title_size_medium.title
+              | Winter Baikal
             .place__website
-              span.place__url-heading.
-
-                                URL
-
-              a.place__link(href='https://whc.unesco.org/en/list/754/' target='_blank' rel='noopener noreferrer').
-
-                                unesco.org
-
-            img.place__image(src= require("./images/place-winter-baikal.jpg") alt="Ice on Baikal")
+              span.place__url-heading
+                | URL
+              a.place__link.link(
+                href="https://whc.unesco.org/en/list/754/",
+                target="_blank",
+                rel="noopener noreferrer"
+              )
+                | unesco.org
+            picture.place__image-wrap
+              source(
+                srcset=require("./images/place-winter-baikal.webp"),
+                type="image/webp"
+              )
+              img.place__image(
+                src= require("./images/place-winter-baikal.jpg"),
+                alt="Ice on Baikal"
+              )
             .place__description
-              p.place__paragraph.
-
-                                Everyone knows Baikal as the largest lake in the world. Many also know that this is the largest source of fresh water and one of the most beautiful places in Russia.
-
-              p.place__paragraph.
-
-                                Of course, it’s all true. But Baikal is still an ideal place for skiing competitions. This is a sport where the skier ties himself to the motorcycle, and the tandem tries to develop as much speed as possible on the ice. In March 2019, a world record was set at the Baikal Mile festival — 197.011 km/h.
-
+              p.place__paragraph.text
+                | Everyone knows Baikal as the largest lake in the world.
+                | Many also know that this is the largest source of fresh
+                | water and one of the most beautiful places in Russia.
+              p.place__paragraph.text
+                | Of course, it’s all true. But Baikal is still
+                | an ideal place for skiing competitions. This
+                | is a sport where the skier ties himself to the
+                | motorcycle, and the tandem tries to develop as much
+                | speed as possible on the ice. In March 2019,
+                | a world record was set at the Baikal Mile festival —
+                | 197.011 km/h.
           article.place.places__item
-            h2.place__title.section-title.section-title_size_medium.
-
-                            Karelia
-
+            h2.place__title.section-title.section-title_size_medium.title
+              | Karelia
             .place__website
-              span.place__url-heading.
-
-                                URL
-
-              a.place__link(href='http://vodlozero.ru/en/' target='_blank' rel='noopener noreferrer').
-
-                                http://vodlozero.ru/en/
-
-            img.place__image(src= require("./images/place-karelia.jpg") alt="Forests of Karelia")
+              span.place__url-heading
+                | URL
+              a.place__link.link(
+                href="http://vodlozero.ru/en/",
+                target="_blank",
+                rel="noopener noreferrer"
+              )
+                | http://vodlozero.ru/en/
+            picture.place__image-wrap
+              source(
+                srcset=require("./images/place-karelia.webp"),
+                type="image/webp"
+              )
+              img.place__image(
+                src= require("./images/place-karelia.jpg"),
+                alt="Forests of Karelia"
+              )
             .place__description
-              p.place__paragraph.
-
-                                Siberia ends not in the Urals, but in Karelia: the Siberian larch that forms the taiga does not grow west of the Vodlozero. But here it swings up to 30 meters — the forests of the Karelian national parks, due to impenetrable swamps, have never known an ax. Some pines are more than half a millennium old. Touch a living creature that saw the sun before Ivan the Terrible saw it. In the virgin forest for a hundred kilometers you will not find a path. And on rare paths trees a couple of meters from the ground are marked with bear claws. Let everyone know who’s boss.
-
+              p.place__paragraph.text
+                | Siberia ends not in the Urals, but in Karelia: the
+                | Siberian larch that forms the taiga does not grow west
+                | of the Vodlozero. But here it swings
+                | up to 30 meters — the forests of the Karelian
+                | national parks, due to impenetrable swamps, have never
+                | known an ax. Some pines are more than half a millennium
+                | old. Touch a living creature that saw the sun before Ivan
+                | the Terrible saw it. In the virgin forest for
+                | a hundred kilometers you will not find a path. And
+                | on rare paths trees a couple of meters from the
+                | ground are marked with bear claws. Let everyone know who’s
+                | boss.
         section.cover.section.content__section
-          a.cover__item(href='https://stampsy.com/na-elektrichkakh-do-baikala' target='_blank' rel='noopener noreferrer')
-            h2.cover__title.section-title.section-title_size_medium.title.
-
-                            To Baikal «on dogs»
-
-            p.cover__subtitle.
-
-                            Based on the educational topic about the Trans-Siberian Railway — a journey from the capital to Baikal by electric trains.
-
+          a.cover__item(
+            href="https://stampsy.com/na-elektrichkakh-do-baikala",
+            target="_blank",
+            rel="noopener noreferrer"
+          )
+            h2.cover__title.section-title.section-title_size_medium.title
+              | To Baikal «on dogs»
+            p.cover__subtitle.text
+              | Based on the educational topic about the Trans-Siberian
+              | Railway — a journey from the capital to Baikal
+              | by electric trains.
       footer.footer.section.page__footer
-        p.footer__copyright
+        p.footer__copyright.text
           | © 2021
-
-          a.footer__author-link(href='https://www.linkedin.com/in/a-meti/' target='_blank' rel='noopener noreferrer').
-
-                        Anastasiia Metikova
+          a.footer__author-link.link(
+            href="https://www.linkedin.com/in/a-meti/",
+            target="_blank",
+            rel="noopener noreferrer"
+          )
+            | Anastasiia Metikova
