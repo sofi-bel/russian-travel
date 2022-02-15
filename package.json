@@ -44,7 +44,7 @@
   },
 
   "devDependencies": {
-    "@babel/core": "^7.17.2",
+    "@babel/core": "^7.17.3",
     "@babel/preset-env": "^7.16.11",
     "@prettier/plugin-pug": "^1.19.2",
     "babel-loader": "^8.2.3",
@@ -77,7 +77,7 @@
     "stylelint-prettier": "^2.0.0",
     "stylelint-sass-render-errors": "^3.0.0",
     "stylelint-scss": "^4.1.0",
-    "webpack": "^5.68.0",
+    "webpack": "^5.69.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4",
     "webpack-webmanifest-loader": "^2.0.2"
