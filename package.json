@@ -44,7 +44,7 @@
   },
 
   "devDependencies": {
-    "@babel/core": "^7.17.4",
+    "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
     "@prettier/plugin-pug": "^1.19.2",
     "babel-loader": "^8.2.3",
@@ -61,7 +61,7 @@
     "mini-css-extract-plugin": "^2.5.3",
     "postcss": "^8.4.6",
     "postcss-loader": "^6.2.1",
-    "postcss-preset-env": "^7.4.0",
+    "postcss-preset-env": "^7.4.1",
     "prettier": "^2.5.1",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
@@ -77,7 +77,7 @@
     "stylelint-prettier": "^2.0.0",
     "stylelint-sass-render-errors": "^3.0.0",
     "stylelint-scss": "^4.1.0",
-    "webpack": "^5.69.0",
+    "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4",
     "webpack-webmanifest-loader": "^2.0.2"
