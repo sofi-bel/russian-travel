@@ -38,19 +38,19 @@ https://github.com/a-meti/russian-travel.git
 ```
 Install dependencies
 ```
-npm install
+yarn install
 ```
 Server with hot reload at http://localhost:9000/
 ```
-npm run start
+yarn start
 ```
 Production Build
 ```
-npm run build
+yarn build
 ```
 Development mode
 ```
-npm run dev
+yarn dev
 ```
 
 ## Demo
