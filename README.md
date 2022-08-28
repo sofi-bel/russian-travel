@@ -3,8 +3,8 @@
   <h1>Traveling in Russia</h1>
   <p>A landing page about Traveling in Russia.</p>
   <a href="https://wakatime.com/badge/user/29a8352f-15fa-421a-b8ff-a7adff87a0dc/project/e9547ba7-aa68-44f6-8170-5178de0e071f"><img src="https://wakatime.com/badge/user/29a8352f-15fa-421a-b8ff-a7adff87a0dc/project/e9547ba7-aa68-44f6-8170-5178de0e071f.svg?style=for-the-badge&logo=appveyor" alt="wakatime"></a>
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/a-meti/russian-travel?style=for-the-badge">
-  <a href="https://github.com/a-meti/russian-travel/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/a-meti/russian-travel?style=for-the-badge"></a>
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/sofi-bel/russian-travel?style=for-the-badge">
+  <a href="https://github.com/sofi-bel/russian-travel/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/a-meti/russian-travel?style=for-the-badge"></a>
   <p>
       <a href="https://jigsaw.w3.org/css-validator/check/referer">
           <img style="border:0;width:88px;height:31px"
@@ -34,7 +34,7 @@
 Clone the repo
 
 ```
-https://github.com/a-meti/russian-travel.git
+git clone https://github.com/sofi-bel/russian-travel.git
 ```
 Install dependencies
 ```
@@ -55,4 +55,4 @@ yarn dev
 
 ## Demo
 
-[Look at the result.](https://a-meti.github.io/russian-travel/)
+[Look at the result.](https://sofi-bel.github.io/russian-travel/)
