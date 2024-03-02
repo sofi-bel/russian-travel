@@ -53,6 +53,9 @@ Development mode
 yarn dev
 ```
 
+## Layout
+[Link to layout in Figma](https://www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-%2B-mobile?type=design&mode=design)
+
 ## Demo
 
-[Look at the result.](https://sofi-bel.github.io/russian-travel/)
+[Look at the result](https://sofi-bel.github.io/russian-travel/)
