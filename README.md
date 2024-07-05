@@ -15,45 +15,56 @@
 </div>
 
 ## Stack
-* HTML5 & CSS3
-* Pug
-* SCSS
-* Flexbox
-* CSS grid
-* BEM
-* Adaptive web design
-* Responsive web design
-* Mobile first
-* Media queries
-* Web accessibility
-* Relative units
-* Semantic layout
-* Webpack
+
+- HTML5 & CSS3
+- Pug
+- SCSS
+- Flexbox
+- CSS grid
+- BEM
+- Adaptive web design
+- Responsive web design
+- Mobile first
+- Media queries
+- Web accessibility
+- Relative units
+- Semantic layout
+- Webpack
 
 ## Build Setup
+
 Clone the repo
 
 ```
 git clone https://github.com/sofi-bel/russian-travel.git
 ```
+
 Install dependencies
+
 ```
-yarn install
+npm install
 ```
+
 Server with hot reload at http://localhost:9000/
+
 ```
-yarn start
+npm run start
 ```
+
 Production Build
+
 ```
-yarn build
+npm run build
 ```
+
 Development mode
+
 ```
-yarn dev
+npm run dev
 ```
 
 ## Layout
+
 [Link to layout in Figma](https://www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-%2B-mobile?type=design&mode=design)
 
 ## Demo
