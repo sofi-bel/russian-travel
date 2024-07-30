@@ -45,7 +45,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
-    "@prettier/plugin-pug": "^2.0.0",
+    "@prettier/plugin-pug": "^3.0.0",
     "babel-loader": "^9.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^7.0.0",
@@ -61,7 +61,7 @@
     "postcss": "^8.4.7",
     "postcss-loader": "^8.0.0",
     "postcss-preset-env": "^9.0.0",
-    "prettier": "^2.5.1",
+    "prettier": "^3.3.2",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "sass": "^1.49.9",
